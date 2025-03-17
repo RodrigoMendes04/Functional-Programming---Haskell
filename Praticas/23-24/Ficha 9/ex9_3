@@ -1,0 +1,26 @@
+Vamos mostrar
+    reverse (xs++ys) = reverse ys ++ reverse xs
+
+reverse [] = []                     [1]
+reverse (x:xs) = reverse xs ++ [x]  [2]
+
+Indução sobre xs
+
+Caso Base
+xs = []
+reverse ([]++ys) =
+= reverse ys =
+= reverse ys ++ [] =            (definição [1])
+= reverse ys ++ reverse []
+
+Caso geral
+xs = (x:ns)
+
+reverse (xs ++ ys) =
+= reverse ((x:ns) ++ ys) =
+= reverse ((x ++ ns) ++ ys) =   (associatividade de ++)
+= reverse (x ++ (ns ++ ys)) =   (definição [2])
+= reverse (ns ++ ys) ++ [x] =   (por HI)
+= reverse ys ++ reverse ns ++ [x] =     (definição [2])
+= reverse ys ++ reverse (x:ns) =
+= reverse ys ++ reverse xs

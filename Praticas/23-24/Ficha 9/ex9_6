@@ -1,0 +1,22 @@
+mostrar
+
+length (map f xs) = length xs
+
+indução sobre xs
+
+caso base
+
+xs = []
+
+length (map f []) =
+= length ([])
+
+caso geral
+
+xs = (y:ys)
+
+length (map f (y:ys)) =
+= length (f y : map f ys) =
+= 1 + length (map f ys) =       por HI
+= 1 + length ys =
+= length (y:ys)

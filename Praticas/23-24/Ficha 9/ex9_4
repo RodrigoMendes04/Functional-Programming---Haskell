@@ -1,0 +1,19 @@
+mostrar
+map f (map g xs) = map (f.g) xs
+
+Caso Base
+xs = []
+
+map f (map g []) =
+= map f [] =
+= [] =
+= map (f.g) []
+
+Caso geral
+xs = (y:ys)
+
+map f (map g (y:ys)) =
+= map f (g y : map g ys) =
+= f (g y) : map f (map g ys) =      por HI
+= f.g y : map (f.g) ys = 
+= map (f.g) (y:ys)

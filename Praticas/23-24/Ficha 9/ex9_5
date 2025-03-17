@@ -1,0 +1,30 @@
+mostrar 
+
+take n xs ++ drop n xs = xs
+
+indução sobre n
+
+caso base
+
+se n = 0
+
+take 0 xs ++ drop 0 xs =
+= [] ++ xs =
+= xs
+
+caso geral
+
+se xs = []
+
+take n [] ++ drop n [] =
+= [] ++ [] =
+= []
+
+se xs = (y:ys)
+
+take n (y:ys) ++ drop n (y:ys) =
+= y : take (n-1) ys ++ drop (n-1) ys =
+= y ++ take (n-1) ys ++ drop (n-1) ys =     por HI
+= y ++ ys =
+= (y:ys) =
+= xs

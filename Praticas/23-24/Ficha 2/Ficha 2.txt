@@ -1,0 +1,87 @@
+2.1
+a) (’a’,’2’)
+Tipo: (Char, Char)
+b) (’b’,1)
+Tipo: (Char, Int)
+c) ['a','b','c']
+Tipo: [Char]
+d) 1+2 == 4
+Tipo: Bool
+e) not
+Tipo: Bool -> Bool
+f) sqrt
+Tipo: Float -> Float
+g) [sqrt, sin, cos]
+Tipo: [Float -> Float]
+h) [tail, init, reverse]
+Tipo: [[a] -> [a]]
+i) ([False,True],[True,False])
+Tipo: ([Bool], [Bool])
+j) [(False,True),(True,False)]
+Tipo: [(Bool, Bool)]
+.                                   
+2.2
+a) 1 + 1.5
+Não há erro de tipos. A soma de um número inteiro com um número de ponto flutuante é permitida.
+b) 1 + False
+Há um erro de tipos. Não é possível somar um número inteiro com um valor booleano.
+c) 'a' + 'b'
+Há um erro de tipos. Não é possível somar dois caracteres.
+d) 'a' ++ 'b'
+Há um erro de tipos. O operador ++ é usado para concatenar strings, não caracteres.
+e) "a" ++ "b"
+Não há erro de tipos. Esta expressão concatena duas strings.
+f) "1+2" == "3"
+Não há erro de tipos. Ambas as partes são strings e podem ser comparadas.
+g) 1+2 == "3"
+Há um erro de tipos. Não é possível comparar uma expressão numérica com uma string.
+h) show (1+2) == "3"
+Não há erro de tipos. A função show converte a expressão numérica em uma string para comparação.
+i) 'a' < 'b'
+Não há erro de tipos. Comparar caracteres usando < é permitido em Haskell.
+j) 'a' < "ab"
+Há um erro de tipos. Não é possível comparar um caractere com uma string.
+k) (1 <= 2) <= 3
+Há um erro de tipos. A comparação <= retorna um valor booleano, e não pode ser usada como argumento de outra comparação.
+l) (1 <= 2) < (3 <= 4)
+Há um erro de tipos. Da mesma forma que em (k), a comparação <= retorna um valor booleano, e não pode ser usada como argumento de outra comparação.
+m) head [1,2]
+Não há erro de tipos. A função head retorna o primeiro elemento de uma lista.
+n) head (1,2)
+Há um erro de tipos. A função head é aplicável apenas a listas, não a tuplas.
+o) tail "abc"
+Não há erro de tipos. A função tail retorna todos os elementos de uma string, exceto o primeiro.
+.                                   
+2.3
+a) second xs = head (tail xs)
+Tipo mais geral: second :: [a] -> a
+Restrições de classes: Não há restrições de classes.
+b) swap (x,y) = (y,x)
+Tipo mais geral: swap :: (a, b) -> (b, a)
+Restrições de classes: Não há restrições de classes.
+c) pair x = (x,x)
+Tipo mais geral: pair :: a -> (a, a)
+Restrições de classes: Não há restrições de classes.
+d) double x = 2*x
+Tipo mais geral: double :: Num a => a -> a -> a            ou    double :: Num a => a -> a
+                                    |    |    |
+                                Argumentos    Resultado
+Restrições de classes: Num a indica que o tipo a deve ser numérico.
+e) half x = x/2
+Tipo mais geral: half :: Fractional a => a -> a
+Restrições de classes: Fractional a indica que o tipo a deve ser fracionário.
+f) average x y = (x+y)/2
+Tipo mais geral: average :: Fractional a => a -> a -> a
+Restrições de classes: Fractional a indica que os tipos x e y devem ser fracionários.
+g) isLower x = x>='a' && x<='z'
+Tipo mais geral: isLower :: Char -> Bool
+Restrições de classes: Não há restrições de classes.
+h) inRange x lo hi = x>=lo && x<= hi
+Tipo mais geral: inRange :: Ord a => a -> a -> a -> Bool
+Restrições de classes: Ord a indica que o tipo a deve ser uma instância da classe de tipos ordenáveis.
+i) isPalindrome xs = xs == reverse xs
+Tipo mais geral: Eq a => [a] -> Bool
+Restrições de classes: Eq a indica que o tipo a deve ser uma instância da classe de tipos comparáveis.
+j) twice f x = f (f x)
+Tipo mais geral: (a -> a) -> a -> a
+Restrições de classes: Não há restrições de classes.
