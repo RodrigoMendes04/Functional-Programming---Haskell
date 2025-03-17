@@ -1,2 +1,17 @@
-# Functional-Programming---Haskell
-Exercises and solutions from the Functional Programming course @ FCUP, using Haskell. Taken during the second semester of the first year of the Bachelor's in Computer Science.
+# 💻 Functional Programming with Haskell
+
+This repository contains exercises and solutions from the **Functional Programming** course at the *FCUP**. The course focuses on **Haskell**, a purely functional programming language, and covers essential concepts in functional programming.
+
+---
+
+## 📚 Description
+
+Throughout the semester, several practical exercises were completed to develop a deep understanding of functional programming paradigms, including:
+
+- **Pure Functions**
+- **Higher-Order Functions**
+- **Lazy Evaluation**
+- **Recursion**
+- **Type Systems in Haskell**
+- **Monads**
+- **Pattern Matching**
