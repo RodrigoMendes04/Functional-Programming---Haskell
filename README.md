@@ -1,6 +1,12 @@
-# 💻 Functional Programming with Haskell
+# 💻 Functional Programming - FCUP
 
-This repository contains exercises and solutions from the **Functional Programming** course at the *FCUP**. The course focuses on **Haskell**, a purely functional programming language, and covers essential concepts in functional programming.
+![Haskell](https://img.shields.io/badge/Haskell-5e5086?style=for-the-badge&logo=haskell&logoColor=white)  
+![FCUP](https://img.shields.io/badge/Faculty-FCUP-blue?style=for-the-badge)  
+![Year](https://img.shields.io/badge/Year-1st%20Year%20(2nd%20Semester)-purple?style=for-the-badge)  
+
+
+**Exercises and solutions  from the Functional Programming course @ FCUP.**  
+Developed in Haskell during the second semester of the first year of the Bachelor's Degree in Computer Science.  
 
 ---
 
